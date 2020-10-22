@@ -13,7 +13,8 @@ var division=[];
 
 
 
-function setup() {
+function setup() 
+{
   createCanvas(480,800);
   engine = Engine.create();
   world = engine.world;
@@ -30,20 +31,25 @@ function setup() {
 
   
 
-  for (var j=40;j <= width ;j=j+50 ){
+  for (var j=40;j <= width ;j=j+50 )
+  {
     plinkos.push(new Plinko(j,75,20))
   }
-  for (var j=15;j <= width ;j=j+50 ){
+  for (var j=15;j <= width ;j=j+50 )
+  {
     plinkos.push(new Plinko(j,175,20))
   }
-  for (var j=40;j <= width ;j=j+50 ){
+  for (var j=40;j <= width ;j=j+50 )
+  {
     plinkos.push(new Plinko(j,275,20))
   }
-  for (var j=15;j <= width ;j=j+50 ){
+  for (var j=15;j <= width ;j=j+50 )
+  {
     plinkos.push(new Plinko(j,375,20))
   }
 
-  if(frameCount % 90 === 0){
+  if(frameCount % 90 === 0)
+  {
     particles.push(new Particle(random(width/2-10, width/2+10),10,10))
   }
 
@@ -53,17 +59,21 @@ function setup() {
 
 }
 
-function draw() {
+function draw() 
+{
   background(0);  
-  for(var j=0;j<plinkos.length;j++){
+  for(var j=0;j<plinkos.length;j++)
+  {
     plinkos[j].display();
 
   }
-  if(frameCount % 90 === 0){
+  if(frameCount % 90 === 0)
+  {
     particles.push(new Particle(random(width/2-10, width/2+10),10,10))
   }
 
-  for(var j=0;j<particles.length;j++){
+  for(var j=0;j<particles.length;j++)
+  {
     particles[j].display();
 
   }
@@ -78,6 +88,5 @@ function draw() {
   divi4.display();
   divi5.display();
   divi6.display();
-// particles.display();
 
 }
